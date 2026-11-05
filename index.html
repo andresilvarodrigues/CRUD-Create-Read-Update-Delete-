@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clientes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Clientes</h1>
+    <p class="intro">Cadastre, veja e exclua clientes. Os dados ficam salvos na API do CrudCrud.</p>
+
+    <form id="form-cliente" novalidate>
+      <div class="linha">
+        <label>Nome
+          <input type="text" id="nome" name="nome" autocomplete="name" required>
+        </label>
+        <label>E-mail
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </label>
+      </div>
+      <button type="submit" id="btn-salvar">Cadastrar cliente</button>
+    </form>
+
+    <p id="mensagem" class="status" role="status" aria-live="polite"></p>
+
+    <section aria-labelledby="titulo-lista">
+      <h2 id="titulo-lista">Clientes cadastrados <span id="contador" class="contador">0</span></h2>
+      <ul id="lista-clientes" class="lista"></ul>
+      <p id="vazio" class="vazio" hidden>Nenhum cliente cadastrado ainda. Use o formulário acima para adicionar o primeiro.</p>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
